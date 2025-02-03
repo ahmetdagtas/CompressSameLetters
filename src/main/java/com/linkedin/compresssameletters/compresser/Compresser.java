@@ -14,6 +14,13 @@ package com.linkedin.compresssameletters.compresser;
  * The aim is to use first 6 bytes for A-Z 0-9 There is 26+10 = 36 characters is used.
  * Then the remaining 10 bytes to use 2^10 = 1024 (the compressed amount of the recurring)
  * The recurring will be searched if it can be extended a bigger amount, such as constant multiply pow
+ *
+ *
+ * Coding Scenario 3:
+ * A third scenario is OBEB/OKEK
+ * After the letter is determined, the remaining bytes can be used for powers of 2 3 5 ... etc
+ * This will also allow to use 65500 value to reach an enormous amount of characters
+ * But the weak point is prime numbers
  */
 public class Compresser {
 
